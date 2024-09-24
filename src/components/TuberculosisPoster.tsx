@@ -4,18 +4,18 @@ import Image from 'next/image'
 
 export default function TuberculosisPosterComponent() {
   return (
-    <div className="bg-white text-black w-[2000px] h-[3000px] p-8 flex flex-col">
+    <div className="bg-white text-black p-8 flex flex-col aspect-[2/3]">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <Image 
-          src="/public/logo/ieee.png" 
+          src="/logo/ieee.png" 
           alt="IEEE Computer Society Bangladesh Chapter Logo" 
           width={300} 
           height={100} 
         />
         <h1 className="text-4xl font-bold text-blue-700">2024 IEEE Conference on Computing, Applications and Systems (COMPAS)</h1>
         <Image 
-          src="/public/logo/compas.png" 
+          src="/logo/compas.png" 
           alt="IEEE COMPAS 2024 Logo" 
           width={200} 
           height={100} 
@@ -39,26 +39,29 @@ export default function TuberculosisPosterComponent() {
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">Abstract</h3>
             <p className="text-sm">
-              This study used data from Bangabandhu Sheikh Mujib Medical University Hospital and the Health Department across 17 districts to identify high-risk areas and predict pulmonary tuberculosis incidence. Utilizing K-Means clustering and Cluster-wise Regression, the analysis identified distinct risk clusters and provided insights for targeted interventions and resource allocation.
+            Pulmonary tuberculosis (TB) remains a significant public health concern in densely populated regions like Bireuen, Bangladesh, which reported 755 cases in 2019 among a population of 400,000. This study used data from Bangabandhu Sheikh Mujib Medical University Hospital and the Health Department across 17 districts to identify high-risk areas and predict disease incidence. Utilizing K-Means clustering and Cluster-wise Regression, the analysis identified two high-risk areas in Cluster 1, six in Cluster 2, and nine in Cluster 3, with a regression analysis R-squared value of 0.5740, indicating moderate predictive capacity. These findings provide critical insights for public health authorities to devise targeted interventions and allocate resources effectively. Strategies such as targeted screening programs and improved access to diagnostic and treatment facilities in high-risk areas can help mitigate TB's impact. The study emphasizes the importance of continued surveillance, monitoring, and collaborative efforts among government agencies, healthcare providers, researchers, and community stakeholders to achieve TB elimination in Bangladesh.
             </p>
           </div>
+
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">Methodology</h3>
+            <p className="text-sm">The stages of research methodology in applying clustering k-means and linear regression for determining the level of risk of pulmonary tuberculosis are as follows:</p>
             <Image 
-              src="/public/tuberculosis/fig1.png" 
+              src="/tuberculosis/fig1.png" 
               alt="Stages to determine the Risk Level of Pulmonary Tuberculosis" 
               width={500} 
               height={100} 
               className="mx-auto my-4"
             />
             <p className="text-sm">
-              The study employed K-Means clustering to group districts based on TB distribution patterns, followed by cluster-wise linear regression to assess TB risk factors within each cluster.
+            The collected tuberculosis dataset is divided into two groups using k-means clustering and linear regression.  The value of k will determine the number of clusters. The datasets in k-means show the cluster results.  Then cluster-wise Regression is the prediction results.  The combination of cluster results and prediction results is the final result.  Analyzing the data in this process is more effective in determining high-risk areas for pulmonary tuberculosis.
             </p>
           </div>
+
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">Data Analysis</h3>
             <Image 
-              src="/public/tuberculosis/fig3.png" 
+              src="/tuberculosis/fig3.png" 
               alt="K-Means Cluster Graph" 
               width={500} 
               height={300} 
@@ -75,7 +78,7 @@ export default function TuberculosisPosterComponent() {
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">Research Process</h3>
             <Image 
-              src="/public/tuberculosis/fig2.png" 
+              src="/tuberculosis/fig2.png" 
               alt="Stages of Research Methodology" 
               width={500} 
               height={300} 
@@ -85,17 +88,18 @@ export default function TuberculosisPosterComponent() {
               The research process involved data collection, preprocessing, K-Means clustering, cluster analysis, linear regression, and model evaluation to determine TB risk levels.
             </p>
           </div>
+
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">Results</h3>
-            <p className="text-sm">
-              The analysis identified three distinct clusters of TB risk:
+            <div className="text-sm">
+              <p>The analysis identified three distinct clusters of TB risk:</p>
               <ul className="list-disc list-inside">
                 <li>2 regions in Cluster 1 (low risk)</li>
                 <li>6 regions in Cluster 2 (moderate risk)</li>
                 <li>9 regions in Cluster 3 (high risk)</li>
               </ul>
               The cluster-wise regression analysis revealed that population density explains 57% of the variation in TB cases.
-            </p>
+            </div>
           </div>
         </div>
 
@@ -104,7 +108,7 @@ export default function TuberculosisPosterComponent() {
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">Linear Regression Analysis</h3>
             <Image 
-              src="/public/tuberculosis/fig4.png" 
+              src="/tuberculosis/fig4.png" 
               alt="Influence of Population Density on TB Patients" 
               width={500} 
               height={300} 
@@ -114,12 +118,14 @@ export default function TuberculosisPosterComponent() {
               The graph shows the relationship between population density and the number of pulmonary TB patients, illustrating the predictive power of the linear regression model.
             </p>
           </div>
+
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">Conclusion</h3>
             <p className="text-sm">
               The combined K-Means clustering and linear regression approach provided valuable insights into TB risk patterns across different regions. This method enables targeted public health interventions and efficient resource allocation for TB prevention and control. Future research should explore additional variables and advanced machine learning techniques to enhance predictive power and deepen understanding of TB risk factors.
             </p>
           </div>
+
           <div className="bg-orange-100 p-4">
             <h3 className="text-2xl font-bold text-orange-600 mb-2">References</h3>
             <ul className="text-xs list-disc pl-4">
